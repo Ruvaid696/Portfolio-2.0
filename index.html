@@ -12,6 +12,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+    </style>
   </head>
   <body class="bg-gray-900 text-gray-300 font-sans">
     <!-- Header Section -->
@@ -57,7 +73,7 @@
     </header>
 
     <!-- Sidebar Section -->
-    <aside class="fixed bottom-0 left-4 flex flex-col items-center gap-4">
+    <aside class="fixed bottom-0 left-4 flex flex-col items-center gap-4 z-40">
       <ul class="flex flex-col gap-4">
         <li>
           <a href="https://github.com/Ruvaid696" target="_blank" class="text-teal-400 text-2xl hover:text-gray-300">
@@ -83,11 +99,11 @@
     </aside>
 
     <!-- Main Hero Section -->
-    <main id="home" class="min-h-screen flex flex-col justify-center items-center px-6">
+    <main id="home" class="min-h-screen flex flex-col justify-center items-center px-6 mb-32">
       <div class="flex flex-col md:flex-row items-center gap-16 max-w-5xl">
         <div class="flex justify-center">
-          <div class="w-64 h-64 rounded-full bg-gradient-to-br from-teal-400 to-gray-800 flex justify-center items-center shadow-lg">
-            <img src="../portfolio/img/me.png" alt="Ruvaid Shaikh" class="w-full h-full rounded-full object-cover shadow-md" />
+          <div class="w-72 h-72 rounded-full bg-gradient-to-br from-teal-400 to-gray-800 flex justify-center items-center shadow-xl hover:scale-105 transition-transform duration-300 animate-float shadow-teal-400/50">
+            <img src="../portfolio/img/me.png" alt="Ruvaid Shaikh" class="w-full h-full rounded-full object-cover" />
           </div>
         </div>
         <div class="text-center md:text-left">
@@ -108,9 +124,9 @@
     </main>
 
     <!-- My Skills Section -->
-    <section id="skills" class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 py-10 flex items-start pt-32">
-      <div class="max-w-7xl mx-auto px-6 w-full">
-        <div class="text-center mb-10">
+    <section id="skills" class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 py-10 flex items-start pt-16">
+      <div class="max-w-7xl mx-auto px-6 w-full mt-4">
+        <div class="text-center mb-20">
           <p class="text-teal-400 text-sm font-mono mb-2">What I Can Do</p>
           <h2 class="text-4xl font-bold text-gray-100 mb-4">My Skills</h2>
           <div class="w-24 h-1 bg-teal-400 mx-auto rounded-full"></div>
