@@ -48,7 +48,7 @@
             <span>Projects</span>
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="../contact/index.html" class="group text-teal-400 hover:text-gray-300 relative">
+          <a href="#contact" class="group text-teal-400 hover:text-gray-300 relative">
             <span>Contact</span>
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
@@ -66,7 +66,7 @@
         <a href="#home" class="transform translate-x-[-20px] opacity-0 transition-all duration-300 ease-out text-teal-400 hover:text-gray-300 py-2">About</a>
         <a href="#skills" class="transform translate-x-[-20px] opacity-0 transition-all duration-300 ease-out text-teal-400 hover:text-gray-300 py-2">Skills</a>
         <a href="#projects" class="transform translate-x-[-20px] opacity-0 transition-all duration-300 ease-out text-teal-400 hover:text-gray-300 py-2">Projects</a>
-        <a href="../contact/index.html" class="transform translate-x-[-20px] opacity-0 transition-all duration-300 ease-out text-teal-400 hover:text-gray-300 py-2">Contact</a>
+        <a href="#contact" class="transform translate-x-[-20px] opacity-0 transition-all duration-300 ease-out text-teal-400 hover:text-gray-300 py-2">Contact</a>
         <a href="resume.pdf" class="border border-teal-400 px-4 py-2 rounded hover:bg-teal-400 hover:text-gray-900 mt-2">
           Resume
         </a>
@@ -92,7 +92,7 @@
           </a>
         </li>
         <li>
-          <a href="../contact/index.html" class="text-teal-400 text-2xl hover:text-gray-300">
+          <a href="#contact" class="text-teal-400 text-2xl hover:text-gray-300">
             <i class="fa-solid fa-envelope"></i>
           </a>
         </li>
@@ -307,10 +307,10 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 py-20 flex items-start">
-      <div class="max-w-7xl mx-auto px-6 w-full">
+    <section id="projects" class="h-screen bg-gradient-to-b from-gray-900 to-gray-800 flex items-start -mt-10">
+      <div class="max-w-7xl mx-auto px-6 w-full mt-10">
         <!-- Split container -->
-        <div class="flex flex-col md:flex-row gap-12">
+        <div class="flex flex-col md:flex-row gap-8 mt-4">
           <!-- Projects Side -->
           <div class="w-full md:w-1/2">
             <div class="text-center mb-12">
@@ -368,18 +368,13 @@
 
                   <div class="w-full flex-shrink-0 px-4">
                     <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-teal-400/20">
-                      <div class="aspect-video rounded-lg overflow-hidden mb-4 bg-gray-800">
-                        <img src="project3.jpg" alt="Project 3" class="w-full h-full object-cover">
+                      <div class="aspect-video rounded-lg overflow-hidden mb-4 bg-gray-800 flex items-center justify-center">
+                        <img src="img/Work-In-Progress-1-1.png" alt="Project 1" class="w-full h-full object-cover">
                       </div>
-                      <h3 class="text-xl font-semibold text-gray-100 mb-2">Weather Dashboard</h3>
-                      <p class="text-gray-400 mb-4">Real-time weather application showing current conditions and forecasts. Uses OpenWeather API.</p>
+                      <h3 class="text-xl font-semibold text-gray-100 mb-2">More Projects Coming Soon</h3>
+                      <p class="text-gray-400 mb-4">Stay tuned! More exciting projects are under development.</p>
                       <div class="flex gap-4">
-                        <a href="#" class="text-teal-400 hover:text-teal-300">
-                          <i class="fa-brands fa-github text-xl"></i>
-                        </a>
-                        <a href="#" class="text-teal-400 hover:text-teal-300">
-                          <i class="fa-solid fa-arrow-up-right-from-square text-xl"></i>
-                        </a>
+                        <span class="text-gray-500 italic">Under Progress</span>
                       </div>
                     </div>
                   </div>
@@ -429,11 +424,57 @@
       </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="text-center py-4 text-gray-500 text-sm">
-      <p>© 2025 Ruvaid Shaikh. All rights reserved.</p>
-    </footer>
+    <!-- Contact Section -->
+    <section id="contact" class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 py-20 flex items-center">
+      <div class="max-w-7xl mx-auto px-6 w-full">
+        <div class="text-center mb-12">
+          <p class="text-teal-400 text-sm font-mono mb-2">Get In Touch</p>
+          <h2 class="text-4xl font-bold text-gray-100 mb-4">Contact Me</h2>
+          <div class="w-24 h-1 bg-teal-400 mx-auto rounded-full"></div>
+        </div>
 
+        <div class="max-w-2xl mx-auto">
+          <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+            <input type="hidden" name="access_key" value="1f6f967e-8658-42cc-95af-48def54d9588">
+            
+            <div>
+              <input 
+                type="text" 
+                name="name" 
+                placeholder="Your Name" 
+                required
+                class="w-full px-6 py-4 bg-gray-800/50 border border-gray-700 rounded-full focus:outline-none focus:border-teal-400 text-gray-300 placeholder-gray-500"
+              >
+            </div>
+            
+            <div>
+              <input 
+                type="email" 
+                name="email" 
+                placeholder="Your Email" 
+                required
+                class="w-full px-6 py-4 bg-gray-800/50 border border-gray-700 rounded-full focus:outline-none focus:border-teal-400 text-gray-300 placeholder-gray-500"
+              >
+            </div>
+            
+            <div>
+              <textarea 
+                name="message" 
+                placeholder="Your Message" 
+                required
+                rows="6"
+                class="w-full px-6 py-4 bg-gray-800/50 border border-gray-700 rounded-3xl focus:outline-none focus:border-teal-400 text-gray-300 placeholder-gray-500"
+              ></textarea>
+            </div>
+            
+            <button type="submit" class="w-full px-8 py-4 bg-transparent border border-teal-400 text-teal-400 rounded-full hover:bg-teal-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center gap-2 group">
+              Send Message
+              <i class="fa-solid fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
     <script>
       // Toggle Mobile Menu
       document.getElementById("menu-btn").addEventListener("click", () => {
