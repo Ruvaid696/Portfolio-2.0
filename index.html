@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              float: 'float 3s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -12,22 +29,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <style>
-      @keyframes float {
-        0% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-20px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
-      }
-      .animate-float {
-        animation: float 3s ease-in-out infinite;
-      }
-    </style>
   </head>
   <body class="bg-gray-900 text-gray-300 font-sans">
     <!-- Header Section -->
@@ -43,8 +44,8 @@
             <span>Skills</span>
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#work" class="group text-teal-400 hover:text-gray-300 relative">
-            <span>Work</span>
+          <a href="#projects" class="group text-teal-400 hover:text-gray-300 relative">
+            <span>Projects</span>
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a href="../contact/index.html" class="group text-teal-400 hover:text-gray-300 relative">
@@ -64,7 +65,7 @@
       <div id="mobile-menu" class="hidden flex flex-col items-center bg-gray-800 bg-opacity-90 py-4 md:hidden">
         <a href="#home" class="transform translate-x-[-20px] opacity-0 transition-all duration-300 ease-out text-teal-400 hover:text-gray-300 py-2">About</a>
         <a href="#skills" class="transform translate-x-[-20px] opacity-0 transition-all duration-300 ease-out text-teal-400 hover:text-gray-300 py-2">Skills</a>
-        <a href="#work" class="transform translate-x-[-20px] opacity-0 transition-all duration-300 ease-out text-teal-400 hover:text-gray-300 py-2">Work</a>
+        <a href="#projects" class="transform translate-x-[-20px] opacity-0 transition-all duration-300 ease-out text-teal-400 hover:text-gray-300 py-2">Projects</a>
         <a href="../contact/index.html" class="transform translate-x-[-20px] opacity-0 transition-all duration-300 ease-out text-teal-400 hover:text-gray-300 py-2">Contact</a>
         <a href="resume.pdf" class="border border-teal-400 px-4 py-2 rounded hover:bg-teal-400 hover:text-gray-900 mt-2">
           Resume
@@ -116,8 +117,8 @@
             efficient, and innovative solutions. My goal is to deepen my knowledge and contribute 
             to the ever-evolving world of cloud computing.
           </p>
-          <a href="#work" class="inline-block px-6 py-3 border border-teal-400 rounded text-teal-400 hover:bg-teal-400 hover:text-gray-900">
-            Check out my course!
+          <a href="#projects" class="inline-block px-6 py-3 border border-teal-400 rounded text-teal-400 hover:bg-teal-400 hover:text-gray-900">
+            Check out my projects!
           </a>
         </div>
       </div>
@@ -305,6 +306,129 @@
       </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 py-20 flex items-start">
+      <div class="max-w-7xl mx-auto px-6 w-full">
+        <!-- Split container -->
+        <div class="flex flex-col md:flex-row gap-12">
+          <!-- Projects Side -->
+          <div class="w-full md:w-1/2">
+            <div class="text-center mb-12">
+              <p class="text-teal-400 text-sm font-mono mb-2">What I've Built</p>
+              <h2 class="text-3xl font-bold text-gray-100 mb-4">My Projects</h2>
+              <div class="w-24 h-1 bg-teal-400 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="relative">
+              <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800/50 p-2 rounded-full text-teal-400 hover:bg-gray-800 transition-all z-10" id="prev-btn">
+                <i class="fa-solid fa-chevron-left text-lg"></i>
+              </button>
+              <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800/50 p-2 rounded-full text-teal-400 hover:bg-gray-800 transition-all z-10" id="next-btn">
+                <i class="fa-solid fa-chevron-right text-lg"></i>
+              </button>
+
+              <div class="overflow-hidden">
+                <div class="flex transition-transform duration-500 ease-in-out" id="project-slider">
+                  <!-- Keep your existing project cards here but adjust their width -->
+                  <div class="w-full flex-shrink-0 px-4">
+                    <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-teal-400/20">
+                      <div class="aspect-video rounded-lg overflow-hidden mb-4 bg-gray-800">
+                        <img src="img/portfolio-1.0.png" alt="Project 1" class="w-full h-full object-cover">
+                      </div>
+                      <h3 class="text-xl font-semibold text-gray-100 mb-2">Portfolio v1.0</h3>
+                      <p class="text-gray-400 mb-4">My first portfolio website built with pure HTML and CSS, featuring a clean and responsive design with smooth animations.</p>
+                      <div class="flex gap-4">
+                        <a href="https://github.com/Ruvaid696/Portfolio" class="text-teal-400 hover:text-teal-300">
+                          <i class="fa-brands fa-github text-xl"></i>
+                        </a>
+                        <a href="https://ruvaids-portfolio.netlify.app" class="text-teal-400 hover:text-teal-300">
+                          <i class="fa-solid fa-arrow-up-right-from-square text-xl"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="w-full flex-shrink-0 px-4">
+                    <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-teal-400/20">
+                      <div class="aspect-video rounded-lg overflow-hidden mb-4 bg-gray-800">
+                        <img src="project2.jpg" alt="Project 2" class="w-full h-full object-cover">
+                      </div>
+                      <h3 class="text-xl font-semibold text-gray-100 mb-2">URL Shortener</h3>
+                      <p class="text-gray-400 mb-4">A web application that shortens long URLs into manageable links. Built with Node.js and MongoDB.</p>
+                      <div class="flex gap-4">
+                        <a href="#" class="text-teal-400 hover:text-teal-300">
+                          <i class="fa-brands fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-teal-400 hover:text-teal-300">
+                          <i class="fa-solid fa-arrow-up-right-from-square text-xl"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="w-full flex-shrink-0 px-4">
+                    <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-teal-400/20">
+                      <div class="aspect-video rounded-lg overflow-hidden mb-4 bg-gray-800">
+                        <img src="project3.jpg" alt="Project 3" class="w-full h-full object-cover">
+                      </div>
+                      <h3 class="text-xl font-semibold text-gray-100 mb-2">Weather Dashboard</h3>
+                      <p class="text-gray-400 mb-4">Real-time weather application showing current conditions and forecasts. Uses OpenWeather API.</p>
+                      <div class="flex gap-4">
+                        <a href="#" class="text-teal-400 hover:text-teal-300">
+                          <i class="fa-brands fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-teal-400 hover:text-teal-300">
+                          <i class="fa-solid fa-arrow-up-right-from-square text-xl"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificates Side -->
+          <div class="w-full md:w-1/2">
+            <div class="text-center mb-12">
+              <p class="text-teal-400 text-sm font-mono mb-2">My Achievements</p>
+              <h2 class="text-3xl font-bold text-gray-100 mb-4">Certificates</h2>
+              <div class="w-24 h-1 bg-teal-400 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-6">
+              <!-- Certificate Cards -->
+              <a href="img/My Learning _ NVIDIA-landcape.pdf" target="_blank" class="block">
+                <div class="bg-gray-900/50 backdrop-blur-sm p-4 rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-teal-400/20 group">
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="text-xl font-semibold text-gray-100 mb-2">My Learning</h3>
+                      <p class="text-gray-400 mb-2">NVIDIA</p>
+                      <p class="text-sm text-teal-400">Issued: September 2024</p>
+                    </div>
+                    <i class="fa-solid fa-file-pdf text-teal-400 group-hover:text-teal-300 text-xl"></i>
+                  </div>
+                </div>
+              </a>
+
+              <a href="img/Azure AI Fundamentals.pdf" target="_blank" class="block">
+                <div class="bg-gray-900/50 backdrop-blur-sm p-4 rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-teal-400/20 group">
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="text-xl font-semibold text-gray-100 mb-2">Azure Fundamentals</h3>
+                      <p class="text-gray-400 mb-2">Microsoft</p>
+                      <p class="text-sm text-teal-400">Issued: March 2024</p>
+                    </div>
+                    <i class="fa-solid fa-file-pdf text-teal-400 group-hover:text-teal-300 text-xl"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer Section -->
     <footer class="text-center py-4 text-gray-500 text-sm">
       <p>© 2025 Ruvaid Shaikh. All rights reserved.</p>
@@ -352,6 +476,30 @@
 
         // Add scroll event listener
         window.addEventListener('scroll', handleScroll);
+      });
+
+      // Project Slider functionality
+      document.addEventListener('DOMContentLoaded', () => {
+        const slider = document.getElementById('project-slider');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        let currentSlide = 0;
+        const slides = slider.children;
+        const totalSlides = slides.length;
+
+        function updateSlider() {
+          slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+          currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+          updateSlider();
+        });
+
+        nextBtn.addEventListener('click', () => {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          updateSlider();
+        });
       });
     </script>
   </body>
