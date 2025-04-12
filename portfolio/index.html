@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth scroll-pt-20">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,11 +19,23 @@
       <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
         <h1 class="text-teal-400 text-2xl font-bold">Ruvaid</h1>
         <div class="hidden md:flex gap-6">
-          <a href="#about" class="text-teal-400 hover:text-gray-300">About</a>
-          <a href="#experience" class="text-teal-400 hover:text-gray-300">Experience</a>
-          <a href="#work" class="text-teal-400 hover:text-gray-300">Work</a>
-          <a href="../contact/index.html" class="text-teal-400 hover:text-gray-300">Contact</a>
-          <a href="resume.pdf" class="border border-teal-400 px-4 py-2 rounded hover:bg-teal-400 hover:text-gray-900">
+          <a href="#home" class="group text-teal-400 hover:text-gray-300 relative">
+            <span>About</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#skills" class="group text-teal-400 hover:text-gray-300 relative">
+            <span>Skills</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#work" class="group text-teal-400 hover:text-gray-300 relative">
+            <span>Work</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="../contact/index.html" class="group text-teal-400 hover:text-gray-300 relative">
+            <span>Contact</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="resume.pdf" class="border border-teal-400 px-4 py-2 rounded hover:bg-teal-400 hover:text-gray-900 transition-all duration-300">
             Resume
           </a>
         </div>
@@ -34,10 +46,10 @@
       </nav>
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="hidden flex flex-col items-center bg-gray-800 bg-opacity-90 py-4 md:hidden">
-        <a href="#about" class="text-teal-400 hover:text-gray-300 py-2">About</a>
-        <a href="#experience" class="text-teal-400 hover:text-gray-300 py-2">Experience</a>
-        <a href="#work" class="text-teal-400 hover:text-gray-300 py-2">Work</a>
-        <a href="../contact/index.html" class="text-teal-400 hover:text-gray-300 py-2">Contact</a>
+        <a href="#home" class="transform translate-x-[-20px] opacity-0 transition-all duration-300 ease-out text-teal-400 hover:text-gray-300 py-2">About</a>
+        <a href="#skills" class="transform translate-x-[-20px] opacity-0 transition-all duration-300 ease-out text-teal-400 hover:text-gray-300 py-2">Skills</a>
+        <a href="#work" class="transform translate-x-[-20px] opacity-0 transition-all duration-300 ease-out text-teal-400 hover:text-gray-300 py-2">Work</a>
+        <a href="../contact/index.html" class="transform translate-x-[-20px] opacity-0 transition-all duration-300 ease-out text-teal-400 hover:text-gray-300 py-2">Contact</a>
         <a href="resume.pdf" class="border border-teal-400 px-4 py-2 rounded hover:bg-teal-400 hover:text-gray-900 mt-2">
           Resume
         </a>
@@ -57,7 +69,7 @@
             <i class="fa-brands fa-twitter"></i>
           </a>
         </li>
-        <li>
+        <li></li>
           <a href="https://www.linkedin.com/in/ruvi-creations-8b1116302/" target="_blank" class="text-teal-400 text-2xl hover:text-gray-300">
             <i class="fa-brands fa-linkedin"></i>
           </a>
@@ -95,6 +107,188 @@
       </div>
     </main>
 
+    <!-- My Skills Section -->
+    <section id="skills" class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 py-10 flex items-start pt-32">
+      <div class="max-w-7xl mx-auto px-6 w-full">
+        <div class="text-center mb-10">
+          <p class="text-teal-400 text-sm font-mono mb-2">What I Can Do</p>
+          <h2 class="text-4xl font-bold text-gray-100 mb-4">My Skills</h2>
+          <div class="w-24 h-1 bg-teal-400 mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Skill Cards -->
+          <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-teal-400/20">
+            <div class="flex items-center gap-4">
+              <div class="p-4 bg-blue-500/10 rounded-lg">
+                <i class="fa-brands fa-react text-4xl text-blue-500"></i>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-100 mb-3">React</h3>
+                <div class="relative pt-1">
+                  <div class="flex mb-2 items-center justify-between">
+                    <div class="text-sm text-teal-400 font-semibold inline-block py-1">
+                      Progress
+                    </div>
+                    <div class="text-sm text-teal-400 font-semibold inline-block">
+                      40%
+                    </div>
+                  </div>
+                  <div class="overflow-hidden h-2 mb-4 text-xs flex rounded-full bg-gray-700">
+                    <div 
+                      class="progress-bar shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-blue-400 to-blue-600 transition-all duration-[2000ms]" 
+                      data-progress="40%"
+                      style="width: 0%">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-teal-400/20">
+            <div class="flex items-center gap-4">
+              <div class="p-4 bg-yellow-500/10 rounded-lg">
+                <i class="fa-brands fa-js text-4xl text-yellow-500"></i>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-100 mb-3">JavaScript</h3>
+                <div class="relative pt-1">
+                  <div class="flex mb-2 items-center justify-between">
+                    <div class="text-sm text-teal-400 font-semibold inline-block py-1">
+                      Progress
+                    </div>
+                    <div class="text-sm text-teal-400 font-semibold inline-block">
+                      60%
+                    </div>
+                  </div>
+                  <div class="overflow-hidden h-2 mb-4 text-xs flex rounded-full bg-gray-700">
+                    <div 
+                      class="progress-bar shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-yellow-400 to-yellow-600 transition-all duration-[2000ms]" 
+                      data-progress="60%"
+                      style="width: 0%">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-teal-400/20">
+            <div class="flex items-center gap-4">
+              <div class="p-4 bg-green-500/10 rounded-lg">
+                <i class="fa-brands fa-node text-4xl text-green-500"></i>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-100 mb-3">Node.js</h3>
+                <div class="relative pt-1">
+                  <div class="flex mb-2 items-center justify-between">
+                    <div class="text-sm text-teal-400 font-semibold inline-block py-1">
+                      Progress
+                    </div>
+                    <div class="text-sm text-teal-400 font-semibold inline-block">
+                      30%
+                    </div>
+                  </div>
+                  <div class="overflow-hidden h-2 mb-4 text-xs flex rounded-full bg-gray-700">
+                    <div 
+                      class="progress-bar shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-green-400 to-green-600 transition-all duration-[2000ms]" 
+                      data-progress="30%"
+                      style="width: 0%">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-teal-400/20">
+            <div class="flex items-center gap-4">
+              <div class="p-4 bg-pink-500/10 rounded-lg">
+                <i class="fa-brands fa-html5 text-4xl text-pink-500"></i>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-100 mb-3">HTML/CSS</h3>
+                <div class="relative pt-1">
+                  <div class="flex mb-2 items-center justify-between">
+                    <div class="text-sm text-teal-400 font-semibold inline-block py-1">
+                      Progress
+                    </div>
+                    <div class="text-sm text-teal-400 font-semibold inline-block">
+                      70%
+                    </div>
+                  </div>
+                  <div class="overflow-hidden h-2 mb-4 text-xs flex rounded-full bg-gray-700">
+                    <div 
+                      class="progress-bar shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-pink-400 to-pink-600 transition-all duration-[2000ms]" 
+                      data-progress="70%"
+                      style="width: 0%">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-teal-400/20">
+            <div class="flex items-center gap-4">
+              <div class="p-4 bg-orange-500/10 rounded-lg">
+                <i class="fa-brands fa-git-alt text-4xl text-orange-500"></i>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-100 mb-3">Git</h3>
+                <div class="relative pt-1">
+                  <div class="flex mb-2 items-center justify-between">
+                    <div class="text-sm text-teal-400 font-semibold inline-block py-1">
+                      Progress
+                    </div>
+                    <div class="text-sm text-teal-400 font-semibold inline-block">
+                      50%
+                    </div>
+                  </div>
+                  <div class="overflow-hidden h-2 mb-4 text-xs flex rounded-full bg-gray-700">
+                    <div 
+                      class="progress-bar shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-orange-400 to-orange-600 transition-all duration-[2000ms]" 
+                      data-progress="50%"
+                      style="width: 0%">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-teal-400/20">
+            <div class="flex items-center gap-4">
+              <div class="p-4 bg-green-500/10 rounded-lg">
+                <i class="fa-solid fa-database text-4xl text-green-500"></i>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-100 mb-3">MongoDB</h3>
+                <div class="relative pt-1">
+                  <div class="flex mb-2 items-center justify-between">
+                    <div class="text-sm text-teal-400 font-semibold inline-block py-1">
+                      Progress
+                    </div>
+                    <div class="text-sm text-teal-400 font-semibold inline-block">
+                      40%
+                    </div>
+                  </div>
+                  <div class="overflow-hidden h-2 mb-4 text-xs flex rounded-full bg-gray-700">
+                    <div 
+                      class="progress-bar shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-green-400 to-green-600 transition-all duration-[2000ms]" 
+                      data-progress="40%"
+                      style="width: 0%">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer Section -->
     <footer class="text-center py-4 text-gray-500 text-sm">
       <p>© 2025 Ruvaid Shaikh. All rights reserved.</p>
@@ -105,6 +299,43 @@
       document.getElementById("menu-btn").addEventListener("click", () => {
         const mobileMenu = document.getElementById("mobile-menu");
         mobileMenu.classList.toggle("hidden");
+      });
+
+      // Skill bars animation
+      document.addEventListener("DOMContentLoaded", () => {
+        const skillsSection = document.getElementById('skills');
+        const progressBars = document.querySelectorAll('.progress-bar');
+
+        const resetBars = () => {
+          progressBars.forEach(bar => {
+            bar.style.width = '0%';
+          });
+        };
+
+        const animateBars = () => {
+          progressBars.forEach(bar => {
+            const progress = bar.getAttribute('data-progress');
+            bar.style.width = progress;
+          });
+        };
+
+        const handleScroll = () => {
+          const sectionTop = skillsSection.getBoundingClientRect().top;
+          const sectionBottom = skillsSection.getBoundingClientRect().bottom;
+          
+          // Check if section is in viewport
+          if (sectionTop < window.innerHeight && sectionBottom > 0) {
+            animateBars();
+          } else {
+            resetBars();
+          }
+        };
+
+        // Initial reset
+        resetBars();
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
       });
     </script>
   </body>
