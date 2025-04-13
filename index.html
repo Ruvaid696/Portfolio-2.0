@@ -196,23 +196,27 @@
         transition: opacity 0.3s ease, transform 0.3s ease;
       }
 
-      @media (max-width: 768px) {
-        aside {
-          display: none;
-          transition: transform 0.3s ease, opacity 0.3s ease;
-          transform: translateY(100%);
-          opacity: 0;
-        }
+      /* Sidebar styles for all screen sizes */
+      aside {
+        position: fixed;
+        bottom: 0;
+        left: 4;
+        display: flex;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: translateY(100%);
+        opacity: 0;
+        z-index: 40;
+      }
 
-        aside.show-in-contact {
-          transform: translateY(0);
-          opacity: 1;
-        }
+      aside.show-in-contact,
+      aside.show-in-home {
+        transform: translateY(0);
+        opacity: 1;
+      }
 
-        aside.hide-in-home {
-          transform: translateY(100%);
-          opacity: 0;
-        }
+      aside.hide-in-home {
+        transform: translateY(100%);
+        opacity: 0;
       }
     </style>
   </head>
@@ -850,26 +854,19 @@
         const contactSection = document.getElementById('contact');
 
         function updateSidebarVisibility() {
-          if (window.innerWidth <= 768) {
-            const scrollPosition = window.scrollY + window.innerHeight;
-            const viewportMiddle = window.scrollY + (window.innerHeight / 2);
-            const homeStart = homeSection.offsetTop;
-            const homeEnd = homeSection.offsetTop + homeSection.offsetHeight;
-            const contactStart = contactSection.offsetTop;
-            const contactEnd = contactSection.offsetTop + contactSection.offsetHeight;
+          const viewportMiddle = window.scrollY + (window.innerHeight / 2);
+          const homeStart = homeSection.offsetTop;
+          const homeEnd = homeSection.offsetTop + homeSection.offsetHeight;
+          const contactStart = contactSection.offsetTop;
+          const contactEnd = contactSection.offsetTop + contactSection.offsetHeight;
 
-            if ((viewportMiddle >= homeStart && viewportMiddle <= homeEnd) || 
-                (viewportMiddle >= contactStart && viewportMiddle <= contactEnd)) {
-              sidebar.style.transform = 'translateY(0)';
-              sidebar.style.opacity = '1';
-            } else {
-              sidebar.style.transform = 'translateY(100%)';
-              sidebar.style.opacity = '0';
-            }
+          if ((viewportMiddle >= homeStart && viewportMiddle <= homeEnd) || 
+              (viewportMiddle >= contactStart && viewportMiddle <= contactEnd)) {
+            sidebar.style.transform = 'translateY(0)';
+            sidebar.style.opacity = '1';
           } else {
-            // Reset styles for desktop view
-            sidebar.style.transform = '';
-            sidebar.style.opacity = '';
+            sidebar.style.transform = 'translateY(100%)';
+            sidebar.style.opacity = '0';
           }
         }
 
